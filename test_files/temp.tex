@@ -1,0 +1,190 @@
+%------------------------
+% Resume Template
+% Author : Anubhav Singh
+% Github : https://github.com/xprilion
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Yevhenii Budnyk}} & Email: \href{mailto:}{y.budnyk789@gmail.com}\\
+  \href -Mobile:~~~+31 6 29137739\\
+  \href{https://github.com/eugenumber1}{Github: ~~ https://github.com/Eugenumber1} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{~~Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Twente}{Enschede, the Netherlands}
+      {Bachelor of Science - Technical Computer Science;  GPA: 7.5}{September 2020 - November 2023 }
+      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Courses:} Operating Systems, Data Structures, Analysis Of Algorithms, Artificial Intelligence, Machine Learning, Cybersecurity, Software Systems, Network Systems, Databases, Data Science}}}
+      \resumeSubheading
+      {University of Twente Honors Program}{Enschede, the Netherlands}
+      {Business and Entrepreneurship track;  available to the top 10\% of students}{February  2021 - July 2022 }
+    \resumeSubHeadingListEnd
+
+\vspace{-5pt}
+\section{Skills Summary}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Languages}{~~~~~~Python, Java, Perl, JavaScript, Haskell, C, C++}
+	\resumeSubItem{Frameworks}{~~~~Scikit Learn, LangChain, Keras, PyTorch, FastAPI, Django, Selenium, React, NextJS}
+	\resumeSubItem{Databases}{~~~PostgreSQL, SQLite, Pinecone, NeptuneDB, Neo4J}
+	\resumeSubItem{Tools}{~~~~~~~~~~~~~~GIT, Docker, Figma, PyCharm, IntelliJ, Visual Studio Code}
+	\resumeSubItem{Platforms}{~~~~~~~Linux, Unix, Windows, Arduino, Raspberry, AWS, Rasa, Azure}
+	\resumeSubItem{Soft Skills}{~~~~~~~Effective Communication, Leadership, Project Management, Team Collaboration, Problem Solving}
+
+\resumeSubHeadingListEnd
+\vspace{-5pt}
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading{Accenture }{Amsterdam}
+    {AI Software Engineer}{August 2024 - Present}
+    \resumeItemListStart
+    \resumeItem{Retrieval Augmented Generation}
+          {Implemented an application using Natural Language Querying and Neo4j Graph Database, resulting in an 80\% reduction in diagram processing time.}
+        \resumeItem{Customer Support Automation}
+          {Designed an AI-powered customer support pipeline that integrated data from 5 sources, automating various administrative tasks and improving efficiency.}
+        \resumeItem{User Satisfaction Enhancement}
+          {Achieved a 2\% improvement in user satisfaction through LLM-generated text compared to human-written examples, validated in a randomized control trial.}
+      \resumeItemListEnd
+\vspace{-5pt}
+
+    \resumeSubheading{LangWatch }{Amsterdam}
+    {AI and Backend Developer}{March 2024 - August 2024}
+    \resumeItemListStart
+    \resumeItem{LLM Evaluator Automation}
+          {Researched and developed LLM evaluators benefiting 4 clients, streamlining their evaluation processes.}
+        \resumeItem{Custom Dashboard Development}
+          {Built functionality for 3 custom analytics dashboards, enhancing user insights and data analysis.}
+      \resumeItemListEnd
+\vspace{-5pt}
+
+    \resumeSubheading{AgencI }{Amsterdam}
+    {Founder and Developer}{November 2023 - August 2024}
+    \resumeItemListStart
+    \resumeItem{Chatbot Development}
+          {Designed and developed a stateful chatbot that automates waiter tasks, improving operational efficiency in restaurants.}
+        \resumeItem{GenAI-Based System}
+          {Built a CV and Cover Letter generation system utilizing GenAI with a Django backend framework.}
+      \resumeItemListEnd
+\vspace{-5pt}
+    
+    \resumeSubheading{Creative Mules }{Remote}
+    {Full Stack Developer (Internship)}{August 2022 - February 2023}
+    \resumeItemListStart
+    \resumeItem{Automated Mood Board Creation}
+          {Developed a full-stack prototype integrated with AWS services, enhancing design workflows for users.}
+        \resumeItem{User Base Research}
+          {Conducted 10 qualitative interviews to validate a product concept and gain insights into user needs.}
+      \resumeItemListEnd
+\vspace{-5pt}
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\vspace{-5pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{Interactive chatbot for ZGT hospital (GPT3.5, LangChain, Rasa, Docker, Qdrant, React.js)}{(November 2023)}
+    \resumeItemListStart
+        \resumeItem{RAG Implementation}
+          {Engineered a Retrieval Augmented Generation system that utilizes data from over 1000 PDF files for enhanced information retrieval.}
+        \resumeItem{Chatbot Deployment}
+          {Designed and co-developed a Rasa chatbot deployed in a Docker container, significantly improving user inquiry handling.}
+        \resumeItem{Team Leadership}{Managed a team of 5 developers, effectively coordinating with stakeholders throughout the development process.}
+	\resumeItemListEnd
+\resumeSubItem{Research Project on Style Transfer in Lyrics Generation with Large Language Models}{(July 2023)}
+\resumeItemListStart
+        \resumeItem{Dataset Creation}
+          {Created a curated version of a dataset containing 1,000,000 song lyrics, labeled using unsupervised techniques for improved analysis.}
+        \resumeItem{Fine-tuning LLM - LyrAIX}
+          {Optimized a pre-trained LLM neural network with 1.5 billion parameters, enhancing lyrical generation capabilities.}
+	\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-5pt}
+
+\section{Extracurricular activities}
+\resumeSubHeadingListStart
+\resumeSubItem{CS Osvita Performance Engineering Course}{(September - December 2024)}
+\resumeSubItem{ETHDam Hackathon 3rd Place}{(April 2024)}
+\resumeSubItem{Negotiation Course at the University of Twente}{(September 2021 - July 2022)}
+\resumeSubItem{BabyThings startup co-founder}{(February 2021 - July 2022)}
+\resumeSubItem{Voice of Amsterdam startup co-founder}{(April 2021 - March 2022)}
+\resumeSubItem{Twente Debating Society Secretary Board year (Secretary Position)}{(September 2020 - July 2021)}
+\resumeSubHeadingListEnd
+\vspace{-5pt}
+
+\end{document}
