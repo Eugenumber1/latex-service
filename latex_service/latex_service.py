@@ -23,10 +23,9 @@ class LatexService:
         logging.basicConfig(level=logging.INFO)
 
     async def generate_pdf(self, content: bytes, filename: str) -> str:
-        job_id = filename + "_" + str(uuid.uuid4)
-        temporary_directory = tempfile.mkdtemp()
+        job_id = filename + "_" + str(uuid.uuid4())
+        temporary_directory, temporary_file = self.create_temp_file_and_dir(filename)
         try:
-            temporary_file = os.path.join(temporary_directory, f"{filename}.tex")
             with open(temporary_file, "wb+") as file:
                 file.write(content)
 
@@ -35,10 +34,15 @@ class LatexService:
                 temporary_file=temporary_file,
                 filename=filename,
             )
-            self.prepare_output(pdf_path=pdf_path, filename=filename)
+            self.prepare_output(pdf_path=pdf_path, filename=job_id)
             return job_id
         finally:
             shutil.rmtree(temporary_directory)
+
+    def create_temp_file_and_dir(self, filename: str) -> tuple[str, str]:
+        temporary_directory = tempfile.mkdtemp()
+        temporary_file = os.path.join(temporary_directory, f"{filename}.tex")
+        return temporary_directory, temporary_file
 
     async def call_pdflatex(
         self, temporary_directory: str, temporary_file: str, filename: str
@@ -55,7 +59,8 @@ class LatexService:
             text=True,
         )
         if result.returncode != 0:
-            self.logger.error("LaTeX compilation failed: ", result.stderr)
+            self.logger.error(f"Latex compilation failed: {result}")
+            self.logger.error(f"LaTeX compilation failed: {result.stderr}")
             raise CompilationException
 
         pdf_path = os.path.join(temporary_directory, f"{filename}.pdf")
