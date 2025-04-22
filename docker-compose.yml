@@ -4,6 +4,6 @@ services:
   latex-pdf-api:
     build: .
     ports:
-      - "8000:8000"
+      - "5001:5001"
     volumes:
       - ./output:/app/output
